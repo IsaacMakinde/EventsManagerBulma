@@ -1,0 +1,20 @@
+.card-footer.white {
+  background-color: white;
+  .footer-item {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.card-footer.greyed-out {
+  background-color: rgba(207, 207, 207, 0.811);
+  cursor: not-allowed;
+  .card-footer-item {
+    text-decoration: none;
+    cursor: not-allowed;
+    color: black;
+    :hover {
+      color: black;
+    }
+  }
+}

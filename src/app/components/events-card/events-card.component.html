@@ -1,0 +1,37 @@
+<section class="container is-widescreen">
+  <div class="card">
+    <header class="card-header is-centered">
+      <p class="card-header-title">
+        {{ filteredEvents.length }} Upcoming event(s)
+      </p>
+      <div class="is-centre">
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="selectedDate"
+          (ngModelChange)="filterEvents()"
+        />
+      </div>
+    </header>
+    <div class="card-content">
+      <div class="container is-flex-wrap-wrap">
+        <p class="subtitle">
+          <strong>Ireland</strong><br />
+          Showing {{ displayedEvents.length }} event(s)
+        </p>
+        <div class="row">
+          <app-card-item
+            *ngFor="let event of displayedEvents"
+            [event]="event"
+          ></app-card-item>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="card-footer"
+      [ngClass]="!showMoreButtonDisabled ? 'white' : 'greyed-out'"
+    >
+      <a class="card-footer-item" (click)="showMore()">More</a>
+    </footer>
+  </div>
+</section>

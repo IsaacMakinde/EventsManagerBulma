@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Run `npm run server` for a dev json server that cannot be run in production. Navigate `http://localhost:3000/` where you will see the initial json server page. By adding the extension `events` you will be able to view all the events currently in `db.json` and their attributes.
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding

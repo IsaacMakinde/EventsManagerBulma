@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-content">
+    <hr class="hr hr-blurry" />
+    <nav class="columns is-mobile is-flex is-flex-wrap-wrap">
+      <div class="column is-full-mobile is-one-third-tablet has-text-centered">
+        <div>
+          <p class="heading">{{ eventMonth }}</p>
+          <p class="heading-4">
+            <strong>{{ eventDay }}</strong>
+          </p>
+          <p class="heading">{{ eventYear }}</p>
+        </div>
+      </div>
+      <div
+        class="column is-full-mobile is-one-third-tablet has-text-centered text-uppercase"
+      >
+        <div>
+          <p class="heading" style="text-transform: capitalize">
+            {{ eventDayOfWeek }} - {{ eventTime }}
+          </p>
+          <p class="heading" style="text-transform: capitalize">
+            <strong>{{ event.location }}</strong>
+          </p>
+          <p class="heading" style="text-transform: capitalize">
+            {{ event.name }}
+          </p>
+        </div>
+      </div>
+      <div class="column is-full-mobile is-one-third-tablet has-text-centered">
+        <div class="is-flex is-flex-direction-column is-align-items-center">
+          <button
+            class="button is-link"
+            [routerLink]="'/home/events/checkout/' + event.id"
+          >
+            Find Tickets
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<section class="container is-widescreen">
+  <div class="card">
+    <header class="card-header">
+      <button class="button is-link" routerLink="/home/events">Go Back</button>
+      <p class="card-header-title is-center">{{ event$?.name }}</p>
+    </header>
+
+    <div class="card-image is-centered">
+      <figure class="image is-2by4 is-centered">
+        <img class="image-size" [src]="event$?.image" alt="Placeholder image" />
+      </figure>
+    </div>
+    <div class="card-content" style="overflow-y: auto; max-height: 200px">
+      <div class="content">
+        {{ event$?.description }}
+        <br />
+        <ul>
+          <li class="is-active">
+            <a>
+              <span class="icon icon is-large"
+                ><i class="fas fa-calendar" aria-hidden="true"></i
+              ></span>
+              <span>{{ event$?.date }}</span>
+            </a>
+          </li>
+
+          <li class="is-active">
+            <a>
+              <span class="icon icon is-large"
+                ><i class="fas fa-map-marker" aria-hidden="true"></i
+              ></span>
+              <span>{{ event$?.location }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <div class="card-footer-item">
+        <a class="button is-link is-fullwidth" (click)="remove()">Buy Now</a>
+      </div>
+    </footer>
+  </div>
+</section>
